@@ -41,7 +41,10 @@ JOIN orders AS o
 ON p.products_id= o.product_id
 WHERE o.orders_id = 1;
 
-SELECT * FROM orders;
+SELECT *
+FROM products AS p
+JOIN orders AS o
+ON p.products_id= o.product_id;
 
 SELECT SUM(p.price)
 FROM orders AS o
