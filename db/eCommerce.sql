@@ -68,7 +68,9 @@ SET user_id =3
 WHERE orders.orders_id = 3;
 
 6. SELECT *
-FROM orders;
+FROM users AS u
+JOIN orders AS o
+ON u.users_id= o.user_id;
 
 SELECT u.name, COUNT(o.orders_id)
 FROM orders AS o
